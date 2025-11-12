@@ -1,3 +1,4 @@
 # Sql-Practice-Sets
-<img width="762" height="871" alt="image" src="https://github.com/user-attachments/assets/72b3a037-0058-4744-8c11-11c1a6611387" />
-<img width="736" height="632" alt="image" src="https://github.com/user-attachments/assets/efe02608-14fd-4ef5-a4d5-1e03dd984a6d" />
+<img width="678" height="480" alt="image" src="https://github.com/user-attachments/assets/2c1bba60-03e8-4854-9c23-fe019b7b7da1" />
+<img width="673" height="807" alt="image" src="https://github.com/user-attachments/assets/9abab017-6e7e-47a5-8804-d86c3d83de4e" />
+
