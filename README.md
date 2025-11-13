@@ -14,7 +14,6 @@ having
 Min(S.sale_date)>= '2019-01-01'
 and Max(S.sale_date)<= '2019-03-31';
 
-
 <img width="690" height="775" alt="image" src="https://github.com/user-attachments/assets/9919e690-32cd-48af-9a60-b5b20f529a2f" />
 
 ## Solution
@@ -24,3 +23,7 @@ From Views A
 inner join Views B on 
 A.author_id = B.viewer_id
 order by A.author_id;
+
+<img width="618" height="892" alt="image" src="https://github.com/user-attachments/assets/d4c1b3b7-b9a4-42d1-8ce7-be65afffc75a" />
+
+## Solution
