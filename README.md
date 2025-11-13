@@ -38,3 +38,18 @@ FROM
   <img width="496" height="908" alt="image" src="https://github.com/user-attachments/assets/78b3e7d0-5587-4171-9576-f806ad41749d" />
 
 ## Solution
+select ad_id,
+	round(
+			case when (sum(action = 'Clicked') + sum(action = 'Viewed')) = 0 then 0
+            else (sum(action = 'Clicked') / (sum(action = 'Clicked') + sum(action = 'Viewed'))) * 100
+            end, 2) as ctr
+from Ads
+where action in ('Clicked', 'Viewed')
+group by ad_id
+union all
+select ad_id, 0.00 as ctr
+from Ads
+where ad_id not in
+	(select ad_id from Ads where action in ('Clicked', 'Viewed'))
+group by ad_id
+order by ad_id asc, ctr desc;
