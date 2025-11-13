@@ -53,3 +53,7 @@ where ad_id not in
 	(select ad_id from Ads where action in ('Clicked', 'Viewed'))
 group by ad_id
 order by ad_id asc, ctr desc;
+
+<img width="593" height="858" alt="image" src="https://github.com/user-attachments/assets/09a15eb9-adbd-43d9-b967-8d8892c3ac54" />
+
+## Solution
