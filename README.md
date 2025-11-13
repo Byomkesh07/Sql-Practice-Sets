@@ -57,3 +57,10 @@ order by ad_id asc, ctr desc;
 <img width="593" height="858" alt="image" src="https://github.com/user-attachments/assets/09a15eb9-adbd-43d9-b967-8d8892c3ac54" />
 
 ## Solution
+select a.employee_id, count(b.employee_id) as team_size
+from Employee a
+left join Employee b on a.team_id = b.team_id
+group by employee_id;
+
+<img width="613" height="898" alt="image" src="https://github.com/user-attachments/assets/a3aaf5f4-4a3b-4509-8e2d-0ad042d35b57" />
+<img width="648" height="742" alt="image" src="https://github.com/user-attachments/assets/45d732a2-a8ee-441b-b99a-a0aa909c8503" />
