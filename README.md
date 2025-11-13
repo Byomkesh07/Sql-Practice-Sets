@@ -27,3 +27,14 @@ order by A.author_id;
 <img width="618" height="892" alt="image" src="https://github.com/user-attachments/assets/d4c1b3b7-b9a4-42d1-8ce7-be65afffc75a" />
 
 ## Solution
+SELECT 
+  ROUND(
+    100 * COUNT(CASE WHEN order_date = customer_pref_delivery_date THEN 1 END) / COUNT(*),
+    2
+  ) AS immediate_percentage
+FROM 
+  Delivery;
+
+  <img width="496" height="908" alt="image" src="https://github.com/user-attachments/assets/78b3e7d0-5587-4171-9576-f806ad41749d" />
+
+## Solution
