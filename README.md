@@ -133,7 +133,7 @@ FROM
 WHERE
   mail REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$';
 
-### REGEXP checks if the email matches the pattern for a valid email.
-### ^[A-Za-z] ensures the prefix starts with a letter.
-### [A-Za-z0-9_.-]* allows letters, digits, underscore (_), period (.), and dash (-) in the prefix after the first character.
+#### REGEXP checks if the email matches the pattern for a valid email.
+#### ^[A-Za-z] ensures the prefix starts with a letter.
+#### [A-Za-z0-9_.-]* allows letters, digits, underscore (_), period (.), and dash (-) in the prefix after the first character.
 #### @leetcode\.com$ guarantees the domain is exactly @leetcode.com.
