@@ -66,3 +66,23 @@ group by employee_id;
 <img width="648" height="742" alt="image" src="https://github.com/user-attachments/assets/45d732a2-a8ee-441b-b99a-a0aa909c8503" />
 
 ## Solution
+select C.country_name,
+case when avg(W.weather_state) <= 15 then 'Cold'
+	 when avg(W.weather_state) >= 25 then 'Hot'
+     else 'Warm' 
+     end as weather_type
+from Countries C join Weather W on
+C.country_id = W.country_id
+where W.day >= '2019-11-01' and W.day < '2019-12-01'
+group by C.country_name order by C.country_name desc;
+
+<img width="610" height="758" alt="image" src="https://github.com/user-attachments/assets/f760e305-764a-4ea4-b02f-c40949179ce3" />
+<img width="542" height="318" alt="image" src="https://github.com/user-attachments/assets/b802daed-70a0-47f5-b8a3-06dc3c422c2f" />
+
+## Solution
+select P.product_id, 
+Round(sum(U.units * P.price)/sum(U.units),2) as average_price
+from price P join UnitsSold U on
+P.product_id = U.product_id
+and U.purchase_date between P.start_date and P.end_date
+group by P.product_id;
