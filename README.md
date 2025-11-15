@@ -64,3 +64,5 @@ group by employee_id;
 
 <img width="613" height="898" alt="image" src="https://github.com/user-attachments/assets/a3aaf5f4-4a3b-4509-8e2d-0ad042d35b57" />
 <img width="648" height="742" alt="image" src="https://github.com/user-attachments/assets/45d732a2-a8ee-441b-b99a-a0aa909c8503" />
+
+## Solution
