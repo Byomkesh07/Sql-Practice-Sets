@@ -91,3 +91,49 @@ group by P.product_id;
 <img width="452" height="130" alt="image" src="https://github.com/user-attachments/assets/737e5cd2-3a61-4df8-bf6f-72e77616eef2" />
 
 ## Solution
+select player_id,
+min(event_date) as first_login
+from Activity
+group by player_id;
+
+<img width="662" height="753" alt="image" src="https://github.com/user-attachments/assets/e38cc85f-b4a9-4c52-b0a6-2a9e9d1d2311" />
+
+## Solution
+select player_id, device_id
+from Activity
+where (player_id, event_date) in (
+	select player_id,
+    min(event_date)
+    from Activity
+	group by player_id
+    );
+
+<img width="473" height="576" alt="image" src="https://github.com/user-attachments/assets/b8687d69-f5c3-45b4-b696-c4d500979803" />
+<img width="407" height="411" alt="image" src="https://github.com/user-attachments/assets/96d1dbe7-41fb-4b3b-8922-053afd33ca95" />
+
+## Solution
+select P.product_name,
+sum(O.unit) as Unit
+from Products P join Orderss O on
+P.product_id = O.product_id
+where O.order_date >= '2020-02-01' and O.order_date < '2020-03-01'
+group by P.product_name
+having sum(O.unit) >= 100;
+
+<img width="547" height="322" alt="image" src="https://github.com/user-attachments/assets/e107dac5-a784-4d0a-bf5f-7d0c8fc97c5b" />
+<img width="391" height="547" alt="image" src="https://github.com/user-attachments/assets/96a4a2ed-6092-48bd-86d3-9e6da90ecc99" />
+
+## Solution
+SELECT
+  user_id,
+  name,
+  mail
+FROM
+  Users
+WHERE
+  mail REGEXP '^[A-Za-z][A-Za-z0-9_.-]*@leetcode\\.com$';
+
+# REGEXP checks if the email matches the pattern for a valid email.
+# ^[A-Za-z] ensures the prefix starts with a letter.
+# [A-Za-z0-9_.-]* allows letters, digits, underscore (_), period (.), and dash (-) in the prefix after the first character.
+# @leetcode\.com$ guarantees the domain is exactly @leetcode.com.
