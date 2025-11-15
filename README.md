@@ -137,3 +137,8 @@ WHERE
 #### ^[A-Za-z] ensures the prefix starts with a letter.
 #### [A-Za-z0-9_.-]* allows letters, digits, underscore (_), period (.), and dash (-) in the prefix after the first character.
 #### @leetcode\.com$ guarantees the domain is exactly @leetcode.com.
+
+<img width="551" height="817" alt="image" src="https://github.com/user-attachments/assets/2f2ae0e1-e4cb-4126-bcea-f65fb401f82d" />
+<img width="443" height="813" alt="image" src="https://github.com/user-attachments/assets/76c5c599-20b4-49ce-bf8b-4e96b4aceb39" />
+
+## Solution
