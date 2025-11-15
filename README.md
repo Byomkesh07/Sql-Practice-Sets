@@ -86,3 +86,8 @@ from price P join UnitsSold U on
 P.product_id = U.product_id
 and U.purchase_date between P.start_date and P.end_date
 group by P.product_id;
+
+<img width="575" height="562" alt="image" src="https://github.com/user-attachments/assets/99098f73-2382-49e4-b164-ee55e12fa375" />
+<img width="452" height="130" alt="image" src="https://github.com/user-attachments/assets/737e5cd2-3a61-4df8-bf6f-72e77616eef2" />
+
+## Solution
