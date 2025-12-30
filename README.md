@@ -163,5 +163,6 @@ join TVProgram T on C.content_id = T.content_id
 where T.program_date >= '2020-06-01' and T.program_date < '2020-07-01' 
 and C.Kids_content = 'Y';
 
-30. <img width="572" height="693" alt="image" src="https://github.com/user-attachments/assets/e9ab512f-d40b-46d8-aaff-f13027e69803" />
+30.
+<img width="572" height="693" alt="image" src="https://github.com/user-attachments/assets/e9ab512f-d40b-46d8-aaff-f13027e69803" />
 <img width="566" height="480" alt="image" src="https://github.com/user-attachments/assets/8ed508fb-4989-4929-903c-3daabf53f6e6" />
