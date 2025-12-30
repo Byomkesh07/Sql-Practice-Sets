@@ -142,3 +142,14 @@ WHERE
 <img width="443" height="813" alt="image" src="https://github.com/user-attachments/assets/76c5c599-20b4-49ce-bf8b-4e96b4aceb39" />
 
 ## Solution
+select C.customer_id, C.name from Customers C 
+join Orderz O on C.customer_id = O.customer_id
+join Productss P on O.product_id = P.product_id
+where O.order_date >= '2020-06-01' and O.order_date < '2020-08-01'
+GROUP BY
+  c.customer_id,
+  c.name
+HAVING
+  SUM(CASE WHEN MONTH(o.order_date) = 6 THEN o.quantity * p.price ELSE 0 END) >= 100
+  AND
+  SUM(CASE WHEN MONTH(o.order_date) = 7 THEN o.quantity * p.price ELSE 0 END) >= 100;
