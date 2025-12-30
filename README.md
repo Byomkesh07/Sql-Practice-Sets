@@ -166,3 +166,29 @@ and C.Kids_content = 'Y';
 30.
 <img width="572" height="693" alt="image" src="https://github.com/user-attachments/assets/e9ab512f-d40b-46d8-aaff-f13027e69803" />
 <img width="566" height="480" alt="image" src="https://github.com/user-attachments/assets/8ed508fb-4989-4929-903c-3daabf53f6e6" />
+
+## Solution
+select Q.id, Q.year, COALESCE(N.npv, 0) as npv from Queries Q
+left join NPV N on Q.id = N.id and Q.year = N.year;
+
+<img width="676" height="942" alt="image" src="https://github.com/user-attachments/assets/72094eca-919c-4eb6-8855-19f7fbd70443" />
+<img width="607" height="295" alt="image" src="https://github.com/user-attachments/assets/57772605-fea3-45f7-8daf-195546983bd0" />
+
+## Solution
+select E.unique_id, U.name from Employe U
+left join EmployeeUNI E on U.id = E.id
+order by U.name;
+
+<img width="422" height="485" alt="image" src="https://github.com/user-attachments/assets/aace665a-8351-4d0f-b2b3-c40353fcc63c" />
+<img width="457" height="503" alt="image" src="https://github.com/user-attachments/assets/89d92057-bb72-4498-a011-0c4be0dc8e6a" />
+
+## Solution
+SELECT U.name, COALESCE(SUM(R.distance), 0) AS travelled_distance
+FROM Userss U 
+LEFT JOIN Rides R ON U.id = R.user_id
+GROUP BY U.id, U.name
+ORDER BY travelled_distance DESC, U.name ASC;
+
+<img width="682" height="818" alt="image" src="https://github.com/user-attachments/assets/e1b99bbc-8a7c-4e6c-931a-242564f01292" />
+
+## Solution
