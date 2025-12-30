@@ -153,3 +153,12 @@ HAVING
   SUM(CASE WHEN MONTH(o.order_date) = 6 THEN o.quantity * p.price ELSE 0 END) >= 100
   AND
   SUM(CASE WHEN MONTH(o.order_date) = 7 THEN o.quantity * p.price ELSE 0 END) >= 100;
+
+<img width="647" height="477" alt="image" src="https://github.com/user-attachments/assets/79560602-bc9f-434a-a242-0292d39d03fe" />
+<img width="632" height="857" alt="image" src="https://github.com/user-attachments/assets/e3824fcc-8c01-4173-8ce4-e8c0246a2738" />
+
+## Solution
+select distinct C.title from Content C 
+join TVProgram T on C.content_id = T.content_id
+where T.program_date >= '2020-06-01' and T.program_date < '2020-07-01' 
+and C.Kids_content = 'Y';
