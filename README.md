@@ -192,3 +192,17 @@ ORDER BY travelled_distance DESC, U.name ASC;
 <img width="682" height="818" alt="image" src="https://github.com/user-attachments/assets/e1b99bbc-8a7c-4e6c-931a-242564f01292" />
 
 ## Solution
+SELECT 
+  p.product_name,
+  SUM(o.unit) AS unit
+FROM 
+  Productzz p
+JOIN 
+  Orderzz o ON p.product_id = o.product_id
+WHERE 
+  o.order_date >= '2020-02-01' 
+  AND o.order_date < '2020-03-01'
+GROUP BY 
+  p.product_id, p.product_name
+HAVING 
+  SUM(o.unit) >= 100;
